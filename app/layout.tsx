@@ -22,6 +22,7 @@ export default function RootLayout({
             { href: "/dashboard", name: "Dashboard" },
             { href: "/setting", name: "Setting" },
             { href: "/about", name: "About" },
+            { href: "/blog", name: "Blog" },
           ]}
         />
         {children}
