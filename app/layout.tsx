@@ -23,6 +23,7 @@ export default function RootLayout({
             { href: "/setting", name: "Setting" },
             { href: "/about", name: "About" },
             { href: "/blog", name: "Blog" },
+            { href: "/nestedpage", name: "NestedPage" },
           ]}
         />
         {children}
