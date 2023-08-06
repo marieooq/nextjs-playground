@@ -5,10 +5,10 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center gap-8">
       <p className="text-9xl">Home</p>
       <Link
-        href="/about"
+        href="/users"
         className="inline-block text-lg leading-6 hover:text-orange-600 hover:underline"
       >
-        Link to About page
+        Link to Users page
       </Link>
     </div>
   );
