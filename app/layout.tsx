@@ -19,6 +19,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navigation
           navLinks={[
+            { href: "/", name: "Home" },
             { href: "/dashboard", name: "Dashboard" },
             { href: "/setting", name: "Setting" },
             { href: "/about", name: "About" },

@@ -12,7 +12,7 @@ export function Navigation({ navLinks }: { navLinks: navLinksType }) {
   return (
     <div className="w-full flex items-center space-x-8 bg-cyan-200">
       {navLinks.map((link) => {
-        const isActive = pathname.startsWith(link.href);
+        const isActive = pathname === link.href;
 
         return (
           <Link
