@@ -1,24 +1,15 @@
-import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <a
-        className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-        target="_blank"
-        rel="noopener noreferrer"
+    <div className="w-full h-screen bg-cyan-200 flex flex-col items-center justify-center gap-8">
+      <p className="text-9xl">Home</p>
+      <Link
+        href="/about"
+        className="inline-block text-lg leading-6 hover:text-orange-600"
       >
-        By{" "}
-        <Image
-          src="/vercel.svg"
-          alt="Vercel Logo"
-          className="dark:invert"
-          width={100}
-          height={24}
-          priority
-        />
-      </a>
-    </main>
+        Link to About page
+      </Link>
+    </div>
   );
 }
