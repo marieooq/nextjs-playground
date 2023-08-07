@@ -33,6 +33,7 @@ export default function RootLayout({
               { href: "/blog", name: "Blog" },
               { href: "/nestedpage", name: "NestedPage" },
               { href: "/users", name: "Users" },
+              { href: "/pokemon", name: "Pokemon" },
             ]}
           />
           {children}
