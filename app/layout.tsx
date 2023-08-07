@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Navigation } from "./ui/Navigation";
+import { CounterProvider } from "@/context/CounterProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,23 +22,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="w-full h-screen bg-cyan-200">
-          <Navigation
-            navLinks={[
-              { href: "/", name: "Home" },
-              { href: "/dashboard", name: "Dashboard" },
-              { href: "/setting", name: "Setting" },
-              { href: "/about", name: "About" },
-              { href: "/blog", name: "Blog" },
-              { href: "/nestedpage", name: "NestedPage" },
-              { href: "/users", name: "Users" },
-              { href: "/pokemon", name: "Pokemon" },
-            ]}
-          />
-          {children}
-          {team}
-          {analytics}
-        </div>
+        <CounterProvider>
+          <div className="w-full h-screen bg-cyan-200">
+            <Navigation
+              navLinks={[
+                { href: "/", name: "Home" },
+                { href: "/dashboard", name: "Dashboard" },
+                { href: "/setting", name: "Setting" },
+                { href: "/about", name: "About" },
+                { href: "/blog", name: "Blog" },
+                { href: "/nestedpage", name: "NestedPage" },
+                { href: "/users", name: "Users" },
+                { href: "/pokemon", name: "Pokemon" },
+              ]}
+            />
+            <div className="p-4">
+              {children}
+              {team}
+              {analytics}
+            </div>
+          </div>
+        </CounterProvider>
       </body>
     </html>
   );

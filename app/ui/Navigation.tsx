@@ -10,7 +10,7 @@ export function Navigation({ navLinks }: { navLinks: navLinksType }) {
   const pathname = usePathname();
 
   return (
-    <div className="w-full flex items-center space-x-8 bg-cyan-200">
+    <div className="w-full h-[80px] p-8 flex items-center space-x-8 bg-cyan-200">
       {navLinks.map((link) => {
         const isActive = pathname === link.href;
 

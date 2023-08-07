@@ -13,10 +13,11 @@ export default function Home() {
       >
         Link to Users page
       </Link>
-      <Counter>
+      <Counter />
+      {/* <Counter>
         <h2 className="font-bold text-lg mt-4">User list</h2>
         <UsersList />
-      </Counter>
+      </Counter> */}
     </div>
   );
 }

@@ -1,7 +1,13 @@
+"use client";
 import React, { useState } from "react";
+import { useCounter } from "@/context/CounterProvider";
 
-const Counter = ({ children }: { children: React.ReactNode }) => {
-  const [count, setCount] = useState(0);
+type CounterProps = {
+  children?: React.ReactNode;
+};
+
+const Counter = ({ children }: CounterProps) => {
+  const [count, setCount] = useCounter();
   const increment = () => {
     setCount((prev) => prev + 1);
   };
@@ -14,7 +20,7 @@ const Counter = ({ children }: { children: React.ReactNode }) => {
       >
         Increment
       </button>
-      {children}
+      {/* {children} */}
     </div>
   );
 };
