@@ -14,6 +14,7 @@ const UsersList = async () => {
     return response.json();
   };
   const users = await getUsers();
+  console.log({ users });
 
   return (
     <ul>

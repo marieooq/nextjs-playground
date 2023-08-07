@@ -1,7 +1,7 @@
 "use client";
-
 import Link from "next/link";
 import Counter from "./Counter";
+import UsersList from "./users/UsersList";
 
 export default function Home() {
   return (
@@ -13,7 +13,10 @@ export default function Home() {
       >
         Link to Users page
       </Link>
-      <Counter />
+      <Counter>
+        <h2 className="font-bold text-lg mt-4">User list</h2>
+        <UsersList />
+      </Counter>
     </div>
   );
 }

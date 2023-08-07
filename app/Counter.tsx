@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Counter = () => {
+const Counter = ({ children }: { children: React.ReactNode }) => {
   const [count, setCount] = useState(0);
   const increment = () => {
     setCount((prev) => prev + 1);
@@ -14,6 +14,7 @@ const Counter = () => {
       >
         Increment
       </button>
+      {children}
     </div>
   );
 };
