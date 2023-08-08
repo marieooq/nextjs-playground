@@ -11,7 +11,8 @@ const UsersList = async () => {
     // await new Promise((resolve) => setTimeout(resolve, 3000));
     // const response = await fetch("http://localhost:3000/api");
     const response = await fetch("http://localhost:3000/api?name=John", {
-      cache: "no-store",
+      // cache: "no-store",
+      next: { revalidate: 5 },
     });
     if (!response.ok) throw new Error("Error fetching users");
     return response.json();
