@@ -34,6 +34,7 @@ export default function RootLayout({
                 { href: "/nestedpage", name: "NestedPage" },
                 { href: "/users", name: "Users" },
                 { href: "/pokemon", name: "Pokemon" },
+                { href: "/post", name: "Post" },
               ]}
             />
             <div className="p-4">
